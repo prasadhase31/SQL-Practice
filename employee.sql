@@ -17,3 +17,5 @@ select * from employee;
 select name from employee;
 
 delete from employee where id=11;
+
+create table emp(id int primary key,name varchar(20),salary double,address varchar(20),mobNo text(10));
