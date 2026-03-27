@@ -15,3 +15,5 @@ update employee set salary=35000 where id=11;
 select * from employee;
 
 select name from employee;
+
+delete from employee where id=11;
