@@ -23,3 +23,6 @@ create table emp(id int primary key,name varchar(20),salary double,address varch
 insert into emp(id,name,salary,address,mobNo) values (1,'Siddhi',50000,'Pune',7372929172);
 select * from emp;
 select * from employee;
+
+insert into employee(id,name,salary,address,mobNo) values (2,'Prasad',45000,'Pune',8574635213);
+select * from employee;
