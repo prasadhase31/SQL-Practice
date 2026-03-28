@@ -52,3 +52,11 @@ select * from employee where address='Pune';
 select * from employee where salary>40000;
 
 rename table employee to department;
+
+ select * from department;
+ 
+ alter table department drop mobNo;
+ 
+ select * from department;
+ 
+ rename table department to employee;
