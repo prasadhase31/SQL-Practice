@@ -45,3 +45,8 @@ update employee set salary=65000 where id=2;
 use Prasad;
 
 drop table emp;
+select name from employee;
+select address from employee;
+select * from employee where address='Pune';
+
+select * from employee where salary>40000;
