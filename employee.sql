@@ -60,3 +60,9 @@ rename table employee to department;
  select * from department;
  
  rename table department to employee;
+ alter table employee add mobNo varchar(10);
+ select * from employee;
+ insert into employee(id,name,salary,address,mobNo) values (3,'Siddhuu',50000,'Pune',7372929172),(4,'Shenduu',35000,'Mumbai',8657463267),(5,'Prash',2300,'Sangamner',537274632);
+ 
+ select * from employee;
+ 
