@@ -50,3 +50,5 @@ select address from employee;
 select * from employee where address='Pune';
 
 select * from employee where salary>40000;
+
+rename table employee to department;
