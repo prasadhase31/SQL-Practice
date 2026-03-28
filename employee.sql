@@ -18,6 +18,9 @@ insert into employee(id,name,salary,address,mobNo,date_of_birth) values (11,'Pra
 
 select * from employee;
 
+
+
+
 select name from employee;
 
 delete from employee where id=11;
@@ -37,4 +40,8 @@ insert into emp(id,name,salary,address,mobNo) values (2,'Siddhi',50000,'Pune',73
 
 select * from emp;
 
+update employee set salary=65000 where id=2;
 
+use Prasad;
+
+drop table emp;
