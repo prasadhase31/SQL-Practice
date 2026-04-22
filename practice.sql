@@ -20,5 +20,12 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  
  select * from emp where address like 'Pune';
  
+ select * from emp where salary > 40000;
+ 
+ select * from emp where salary<30000;
+ 
+ select * from emp where name='Prasad';
+ 
+ select * from emp where id=2;
  
  
