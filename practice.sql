@@ -28,4 +28,15 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  
  select * from emp where id=2;
  
+ select * from emp where salary>=45000;
+ 
+ select * from emp where salary<>30000;
+ 
+ select * from emp where address<>'Mumbai';
+ 
+ select * from emp where salary between 30000 and 50000;
+ 
+ select * from emp where id in(1,2,3);
+ 
+ 
  
