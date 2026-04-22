@@ -17,7 +17,7 @@ create table emp(id int,name varchar(10),address varchar(10),mobNo varchar(10),d
 insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','Mumbai',9325788321,'2003-06-10',50000);
  
  select * from emp;
- 
+ -- where clause
  select * from emp where address like 'Pune';
  
  select * from emp where salary > 40000;
@@ -38,5 +38,25 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  
  select * from emp where id in(1,2,3);
  
+ select * from emp where address='Pune' and salary>30000;
  
+ select * from emp where address='Pune' or address='Mumbai';
  
+ select * from emp where salary<30000 or address='Pune';
+ 
+ select * from emp where name like 'P%';
+ 
+ select * from emp where name like '%dh%';
+ 
+ select * from emp where name like '_i%';
+ 
+ select * from emp where mobNo like '9%';
+ 
+ select salary,avg(salary) from emp group by salary;
+ 
+ select * from emp where address='Pune' and salary not  between 30000 and 40000;
+ 
+ select * from emp;
+ 
+ -- order by
+ select * from emp order by salary asc;
