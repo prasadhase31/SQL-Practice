@@ -82,8 +82,13 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  select * from emp order by salary desc limit 2;
  select * from emp where address='Pune' order by salary desc;
  select * from emp where name like 'P%' order by name;
- 
+
+-- highest salary
  select * from emp order by salary desc limit 1;
  select * from emp order by salary asc limit 1;
+ 
+ -- 2nd highest salary
  select * from emp order by salary desc limit 1 offset 1;
+ select * from emp where salary=(select distinct salary from emp order by salary desc limit 1 offset 1);
+ 
  
