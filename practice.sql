@@ -60,3 +60,30 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  
  -- order by
  select * from emp order by salary asc;
+ select * from emp order by salary desc;
+ 
+ select * from emp order by name;
+  select * from emp order by name desc;
+  
+  select * from emp order by id;
+  
+  select * from emp order by address;
+ select * from emp order by salary;
+ 
+ select * from emp where address='Pune' order by salary desc;
+ 
+ select * from emp where salary>30000 order by name;
+ 
+ select * from emp order by date_of_birth;
+ 
+ select * from emp  order by address, salary;
+ select * from emp order by salary,name;
+ select * from emp order by salary asc limit 2;
+ select * from emp order by salary desc limit 2;
+ select * from emp where address='Pune' order by salary desc;
+ select * from emp where name like 'P%' order by name;
+ 
+ select * from emp order by salary desc limit 1;
+ select * from emp order by salary asc limit 1;
+ select * from emp order by salary desc limit 1 offset 1;
+ 
