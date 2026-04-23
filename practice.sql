@@ -87,8 +87,15 @@ insert into emp(id,name,address,mobNo,date_of_birth,salary) values(2,'Siddhu','M
  select * from emp order by salary desc limit 1;
  select * from emp order by salary asc limit 1;
  
- -- 2nd highest salary
+ -- 2nd highest salary 
  select * from emp order by salary desc limit 1 offset 1;
  select * from emp where salary=(select distinct salary from emp order by salary desc limit 1 offset 1);
  
- 
+-- group by
+
+select address,count(*) from emp group by address;
+
+select address,count(*) from emp group by address;
+select address,sum(salary)from emp group by address;
+select address,avg(salary) from emp group by address;
+
