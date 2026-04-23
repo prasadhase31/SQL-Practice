@@ -101,4 +101,8 @@ select address,avg(salary) from emp group by address;
 select address,max(salary) from emp group by address;
 select address,min(salary) from emp group by address;
 
+select address,count(*) from emp where salary>46000 group by address;
+
+
+
 
