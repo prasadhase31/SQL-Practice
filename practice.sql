@@ -98,4 +98,7 @@ select address,count(*) from emp group by address;
 select address,count(*) from emp group by address;
 select address,sum(salary)from emp group by address;
 select address,avg(salary) from emp group by address;
+select address,max(salary) from emp group by address;
+select address,min(salary) from emp group by address;
+
 
