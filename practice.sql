@@ -106,3 +106,4 @@ select address,count(*) from emp where salary>46000 group by address;
 
 
 
+
