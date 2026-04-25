@@ -104,7 +104,7 @@ select address,min(salary) from emp group by address;
 select address,count(*) from emp where salary>46000 group by address;
 select avg(salary) from emp where address='Pune';
 select salary,count(*) from emp group by salary;
-
+select address,count(*) from emp where salary>30000 group by address;
 
 
 
