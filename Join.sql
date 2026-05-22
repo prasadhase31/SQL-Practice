@@ -42,5 +42,10 @@ on e.dept_id=d.dept_id;
 select count(*) from employee;
 select count(*) from employee where address='Pune';
 select id,count(*) from employee group by id;
-
+select id,count(*) from employee group by id having count(*)>2;
+ select count(distinct address) from employee;
  
+ select sum(salary) from employee;
+ select sum(salary) from employee where address='Pune';
+ select dept_id, sum(salary) from employee group by dept_id;
+ select dept_id,sum(salary) from employee group by dept_id having sum(salary)>40000;
