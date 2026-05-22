@@ -38,4 +38,9 @@ from employee e
 right join department d
 on e.dept_id=d.dept_id;
 
+
+select count(*) from employee;
+select count(*) from employee where address='Pune';
+select id,count(*) from employee group by id;
+
  
