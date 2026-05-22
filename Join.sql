@@ -60,4 +60,7 @@ select id,count(*) from employee group by id having count(*)>2;
   select * from employee order by salary desc limit 1;
   
   -- Method 1 of 2nd highest salary --
+  select max(salary) from employee where salary<(select max(salary) from employee);
   
+  -- Method 2 --
+  select * from employee order by salary desc limit 1 offset 1;
