@@ -64,3 +64,9 @@ select id,count(*) from employee group by id having count(*)>2;
   
   -- Method 2 --
   select * from employee order by salary desc limit 1 offset 1;
+  
+  select avg(salary) from employee;
+  select dept_id,avg(salary) from employee group by dept_id;
+  select avg(salary) from employee where address="Mumbai";
+  select dept_id,avg(salary) from employee group by dept_id having avg(salary)>40000;
+  select avg(salary) from employee where address <>'Pune';
