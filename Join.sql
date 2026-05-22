@@ -49,3 +49,15 @@ select id,count(*) from employee group by id having count(*)>2;
  select sum(salary) from employee where address='Pune';
  select dept_id, sum(salary) from employee group by dept_id;
  select dept_id,sum(salary) from employee group by dept_id having sum(salary)>40000;
+ 
+ select max(salary) from employee;
+ select dept_id,max(salary) from employee group by dept_id;
+ select address,max(salary) from employee group by address;
+  -- Method 1 for higest salary --
+  select * from employee where salary=(select max(salary) from employee);
+  
+  -- Method 2 --
+  select * from employee order by salary desc limit 1;
+  
+  -- Method 1 of 2nd highest salary --
+  
