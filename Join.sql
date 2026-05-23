@@ -71,4 +71,4 @@ select id,count(*) from employee group by id having count(*)>2;
   select dept_id,avg(salary) from employee group by dept_id having avg(salary)>40000;
   select avg(salary) from employee where address !='Pune';
   
-  select name from employee where exists(select * from department d where e.dept_id=d.dept_id);
+  select name from employee e where exists(select * from department d where e.dept_id=d.dept_id);
