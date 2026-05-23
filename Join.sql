@@ -75,4 +75,5 @@ select id,count(*) from employee group by id having count(*)>2;
   
   select name from employee e where exists(select * from department d where e.dept_id=d.dept_id);
   select * from employee where salary > (select avg(salary) from employee);
+  select * from employee where dept_id in(select dept_id from department);
   
