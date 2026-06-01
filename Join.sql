@@ -77,4 +77,10 @@ select id,count(*) from employee group by id having count(*)>2;
   select * from employee where salary > (select avg(salary) from employee);
   select * from employee where dept_id in(select dept_id from department);
   select * from employee where salary=(select max(salary) from employee);
+  SELECT *FROM employee WHERE (dept_id, salary) IN (
+    SELECT dept_id, MAX(salary)
+    FROM employee
+    GROUP BY dept_id
+);
+  
   
