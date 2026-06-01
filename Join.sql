@@ -82,5 +82,5 @@ select id,count(*) from employee group by id having count(*)>2;
     FROM employee
     GROUP BY dept_id
 );
-  
+  select * from employee where salary > any(select salary from employee where dept_id=101);
   
