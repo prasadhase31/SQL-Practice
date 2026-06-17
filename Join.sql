@@ -99,4 +99,9 @@ select id,count(*) from employee group by id having count(*)>2;
   -- Find departments that have at least one employee. --
   select * from department d where exists(select * from employee e where d.dept_id = e.dept_id);
   
+  -- Find departments that do not have any employees. --
+  select * from department d where not exists(select * from employee e where d.dept_id = e.dept_id);
+  
+  -- Find employees whose salary is greater than ALL salaries in department 101.--
+  select * from employee where salary > all(select salary from employee where dept_id=101);
   
