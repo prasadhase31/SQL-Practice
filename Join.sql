@@ -90,6 +90,13 @@ select id,count(*) from employee group by id having count(*)>2;
   -- Find employees whose salary is greater than the average salary. --
   select * from employee where salary > (select avg(salary) from employee);
   
+  -- Find employees working in departments located in Pune --
+  select * from employee where dept_id in (select dept_id from department where address="Pune");
   
+  -- Find employees not working in Pune departments --
+  select * from employee where dept_id not in(select dept_id from department where address !="Pune");
+  
+  -- Find departments that have at least one employee. --
+  select * from department d where exists(select * from employee e where d.dept_id = e.dept_id);
   
   
