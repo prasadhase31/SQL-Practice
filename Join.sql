@@ -84,3 +84,12 @@ select id,count(*) from employee group by id having count(*)>2;
 );
   select * from employee where salary > any(select salary from employee where dept_id=101);
   
+--  Find the employee having the lowest salary. --
+  select * from employee where salary  = (select min(salary) from employee);
+  
+  -- Find employees whose salary is greater than the average salary. --
+  select * from employee where salary > (select avg(salary) from employee);
+  
+  
+  
+  
