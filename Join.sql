@@ -105,3 +105,6 @@ select id,count(*) from employee group by id having count(*)>2;
   -- Find employees whose salary is greater than ALL salaries in department 101.--
   select * from employee where salary > all(select salary from employee where dept_id=101);
   
+  -- Find employees whose salary is greater than ALL salaries in department 101.--
+  select * from employee where salary > all
+  
